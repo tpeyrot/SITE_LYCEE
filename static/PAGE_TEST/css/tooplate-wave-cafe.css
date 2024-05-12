@@ -1,0 +1,277 @@
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #1E5050;
+}
+
+/* Classes Générales pouvant être réutilisées */
+
+.tm-transparent {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.tm-black-bg {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    width: 100%;
+}
+.tm-white-bg {
+    background-color: rgba(255,255,255,0.6);
+    color: white;
+    width: 100%;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* Classe main */
+
+.tm-main {
+    max-width: 100%; /* Supprime la largeur maximale */
+    margin: 0 auto; /* Centre .tm-main à l'intérieur de .tm-container */
+}
+
+
+
+/* Style de vidéo de fond */
+
+#tm-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+.tm-video-wrapper { position: relative; }
+
+#tm-video-control-button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+}
+
+/* Classe pour le container Physique/Chimie/Projet */
+
+/* On crée d'abord un page content qui va accueillir les boutons*/
+
+    .tm-page-content {
+
+    animation: fadeEffect 1s;
+    width: 100%; /* ou toute autre largeur désirée */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    }
+
+/* Puis le navigateur*/
+
+
+/* Style de base pour les boutons */
+
+
+/* Style de survol pour les boutons */
+
+.tm-subject-nav {
+ animation: fadeEffect 1s;
+ width: 100%; /* ou toute autre largeur désirée */
+ margin-left: auto;
+ margin-right: auto;
+ border-radius: 10px;
+ padding-top: 0.5rem;
+ padding-bottom: 0.5rem;
+ font-size: 3rem;
+ display: flex;
+ justify-content: center;
+}
+
+
+.tm-subject-nav > ul > li a.active,
+.tm-subject-nav > ul > li a:hover {
+        color: #930000;
+        border-bottom: 4px solid #930000;
+    }
+
+    .tm-subject-nav > ul > li a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+
+    .tm-subject-nav > ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        list-style-type: none; /* Supprimer les puces de la liste */
+        padding: 0; /* Supprimer les marges intérieures */
+        margin: 0; /* Supprimer les marges extérieures */
+        display: flex; /* Utiliser Flexbox */
+    }
+
+.tm-subject-nav li {
+    flex: 1; /* Chaque élément prend autant d'espace disponible */
+      margin-right: 1rem; /* Marge entre les boutons */
+}
+
+.tm-tab-button {
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    font-size: 4rem;
+    color: #333; /* Couleur par défaut */
+    transition: color 0.3s ease; /* Animation de transition */
+
+}
+
+.tm-tab-button:hover {
+    color: #930000; /* Couleur au survol */
+}
+
+.tm-subject-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.tm-subject-list li {
+    margin: 0 5px; /* Espacement entre les boutons */
+}
+
+
+
+/* Classe contenant tous les Chapters */
+
+.tm-chapter-list { animation: fadeEffect 1s; }
+
+
+/* Classe pour le container de chapitre */
+
+.tm-chapter {
+    margin-top: 5rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+
+}
+
+
+.chapter-title:hover {
+    color: #40E0D0;
+    cursor: pointer;
+}
+.chapter-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px; /* Espacement supplémentaire en haut */
+}
+
+.download-container {
+    width: 10%; /* Définir une largeur fixe pour chaque icône */
+    padding : 3rem;
+}
+
+.download-container.hidden {
+    display: none; /* Cacher les icônes initialement */
+}
+
+.icon {
+    display: block;
+    margin: 0 auto; /* Centrer l'icône horizontalement */
+}
+
+.file-name {
+    text-align: center; /* Centrer le nom du fichier */
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.icon-wrapper {
+    font-size: 1.5rem; /* Utilise la même police que le parent */
+    font-weight: bold;
+    color: white; /* Couleur du texte blanche */
+    padding: 1rem;
+}
+
+
+
+
+/* NOUVEAUX CSS */
+
+@media screen and (max-width: 768px) {
+    .download-container {
+        width: 50%; /* Deux icônes par ligne */
+    }
+}
+
+
+.download-container {
+    /* Taille de l'icône par rapport à la largeur du conteneur */
+    width: 30%;
+    /* Autres styles... */
+}
+
+.download-container {
+    /* Taille de l'icône par rapport à la largeur du conteneur */
+    width: 30%;
+    /* Autres styles... */
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+
+
+
+
+
+
+/* Media query pour les appareils mobiles */
+@media screen and (max-width: 850px) {
+    .tm-tab-button {
+        padding: 1rem; /* Réduire le rembourrage pour les appareils mobiles */
+        font-size: 2rem; /* Réduire la taille de police pour les appareils mobiles */
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body { font-size: 16px; }
+  .tm-page-content {width: 90%;}
+  .tm-tab-link{font-size: 20px;}
+}
+
+@media screen and (max-width: 768px) {
+    .tm-tab-button {
+        padding: 1rem; /* Réduire le rembourrage pour les appareils mobiles */
+        font-size: 2rem; /* Réduire la taille de police pour les appareils mobiles */
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .tm-subject-list li {
+        margin: 6rem; /* Espacement entre les boutons pour les ordinateurs */
+    }
+}

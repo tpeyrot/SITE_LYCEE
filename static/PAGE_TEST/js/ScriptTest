@@ -1,0 +1,15 @@
+document.querySelectorAll('.tm-chapter').forEach(chapter => {
+   chapter.addEventListener('mouseover', () => {
+       const downloadFrame = chapter.querySelector('.tm-download-frame');
+       if (downloadFrame) {
+           downloadFrame.style.display = 'block';
+       }
+   });
+
+   chapter.addEventListener('mouseout', () => {
+       const downloadFrame = chapter.querySelector('.tm-download-frame');
+       if (downloadFrame) {
+           downloadFrame.style.display = 'none';
+       }
+   });
+});

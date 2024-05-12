@@ -1,0 +1,37 @@
+/* Ajoutez ici vos styles CSS */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu-circulaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu-circulaire a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.top-right-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.top-right-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+}
