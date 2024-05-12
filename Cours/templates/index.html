@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+{% load static %} <!-- Charger les tags statiques -->
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<!-- Background video -->
+<div class="tm-video-wrapper">
+		<i id="tm-video-control-button" class="fas fa-pause"></i>
+		<video autoplay muted loop id="tm-video">
+				<source src="../../static/PAGE_TEST/video/Chemistry Background.mp4" type="video/mp4">
+		</video>
+</div>
+
+	<head>
+		<title>PC LYCEE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-hourglass"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>ParCours Physique Chimie</h1>
+								<p> Pédagogies alternatives au lycée </p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+							<!--	<li><button onclick="window.location.href='/registration/login.html/'" style="width: auto;">Cours</button></li>
+						    <li><button onclick="window.location.href='/registration/signup.html/'">Parcours</button></li>-->
+
+								<li id="cours-dropdown">
+								    <a href="#">Cours</a>
+								    <div id="cours-dropdown-content">
+								        <button onclick="window.location.href='PAGE_TEST2.html'">Seconde</button>
+								        <button class="primary-option">Première</button>
+								        <div class="additional-options-left">
+								            <button onclick="window.location.href='/1ereES.html'">1ere ES</button>
+								        </div>
+								        <div class="additional-options-right">
+								            <button onclick="window.location.href='/1ereSPE.html'">1ere SPE</button>
+								        </div>
+												<button class="primary-option2">Tle</button>
+								        <div class="additional-options2-left">
+								            <button onclick="window.location.href='/TermES.html'">Tle ES</button>
+								        </div>
+								        <div class="additional-options2-right">
+								            <button onclick="window.location.href='/TermSPE.html'">Tle SPE</button>
+								    </div>
+								</li>
+
+
+
+
+
+
+
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Tom PEYROT - Lycée Charles de Gaulle</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js'%}" ></script>
+			<script src="{% static 'assets/js/browser.min.js'%}" ></script>
+			<script src="{% static 'assets/js/breakpoints.min.js'%}" ></script>
+			<script src="{% static 'assets/js/util.js'%}" ></script>
+			<script src="{% static 'assets/js/main.js'%}" ></script>
+			<script src="{% static 'assets/js/Script_menu_deroulant_index.js'%}" ></script>
+
+
+
+	</body>
+</html>
