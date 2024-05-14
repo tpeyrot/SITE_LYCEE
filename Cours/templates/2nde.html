@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %} <!-- Charger les tags statiques -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocs Rectangulaires</title>
+		<link rel="stylesheet" href="{% static 'assets/css/StylesSeconde.css'%}" />
+    <style>
+        /* Ajouter ici des styles spécifiques à cette page si nécessaire */
+        /* Styles des contenus téléchargeables */
+        .content {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff; /* Fond blanc */
+            border-radius: 8px; /* Coins arrondis */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+            margin: 10px;
+            width: calc(50% - 20px); /* Largeur de 50% moins les marges */
+            display: inline-block;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .content a {
+            display: block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Fond bleu */
+            color: #ffffff; /* Texte blanc */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .content a:hover {
+            background-color: #0056b3; /* Fond bleu foncé au survol */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h2>Chapitre 1</h2>
+                <p>Description du chapitre 1</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 2</h2>
+                <p>Description du chapitre 2</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 3</h2>
+                <p>Description du chapitre 3</p>
+                <a href="#">Télécharger</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content">
+                <h2>Chapitre 4</h2>
+                <p>Description du chapitre 4</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 5</h2>
+                <p>Description du chapitre 5</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 6</h2>
+                <p>Description du chapitre 6</p>
+                <a href="#">Télécharger</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content">
+                <h2>Chapitre 7</h2>
+                <p>Description du chapitre 7</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 8</h2>
+                <p>Description du chapitre 8</p>
+                <a href="#">Télécharger</a>
+            </div>
+            <div class="content">
+                <h2>Chapitre 9</h2>
+                <p>Description du chapitre 9</p>
+                <a href="#">Télécharger</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
